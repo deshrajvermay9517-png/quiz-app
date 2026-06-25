@@ -19,7 +19,7 @@ A simple Quiz App built using HTML, CSS, and JavaScript.
 
 ## Live Demo
 
-Add your live link here
+ https://deshrajvermay9517-png.github.io/quiz-app/
 
 ## How to Run
 
