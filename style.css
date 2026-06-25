@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.quiz-container {
+  width: 100%;
+  max-width: 550px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.quiz-header h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.quiz-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background-color: #667eea;
+  transition: width 0.3s ease;
+}
+
+#questionText {
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.answer-buttons {
+  display: grid;
+  gap: 12px;
+}
+
+.answer-btn {
+  width: 100%;
+  border: 2px solid #dddddd;
+  background-color: white;
+  padding: 13px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.answer-btn:hover {
+  background-color: #f3f3ff;
+  border-color: #667eea;
+}
+
+.answer-btn:disabled {
+  cursor: not-allowed;
+}
+
+.correct {
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.wrong {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+#feedback {
+  margin-top: 15px;
+  font-weight: bold;
+  min-height: 22px;
+}
+
+.next-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background-color: #667eea;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  display: none;
+}
+
+.next-btn:hover {
+  background-color: #5568d8;
+}
+
+.restart-btn {
+  display: block;
+}
+
+#resultBox {
+  text-align: center;
+}
+
+#resultBox h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#scoreText {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .quiz-header {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  #questionText {
+    font-size: 19px;
+  }
+
+  .answer-btn {
+    font-size: 15px;
+  }
+}
